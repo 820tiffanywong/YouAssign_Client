@@ -1,0 +1,53 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "craco.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "autoprefixer": "^10.4.13",
+    "axios": "^1.2.1",
+    "chart.js": "^3.9.1",
+    "classnames": "^2.3.2",
+    "concurrently": "^7.5.0",
+    "date-fns": "^2.29.3",
+    "firebase": "^9.10.0",
+    "graphql": "^16.6.0",
+    "postcss": "^8.4.18",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-day-picker": "^8.3.7",
+    "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.0.3",
+    "react-scripts": "^5.0.1",
+    "recoil": "^0.7.5",
+    "recoil-persist": "^4.2.0",
+    "typescript": "^4.8.3"
+  },
+  "scripts": {
+    "start": "npm install && concurrently \"react-scripts start\" \"npx tailwindcss -i ./src/index.css -o ./dist/output.css --watch \"",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.0.0",
+    "react-scripts": "latest",
+    "tailwindcss": "^3.2.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
