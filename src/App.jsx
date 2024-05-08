@@ -1,19 +1,21 @@
+import React from 'react';
 import { getAuth } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Login from './pages/login/login';
 import ContentRouter from "./components/content_router";
 
-export const App = () => {
-    const auth = getAuth()
+const App = () => {
+    console.log("Getting auth")
+    const auth = getAuth();
+    console.log("Got auth")
     const [user, loading, error] = useAuthState(auth);
+    console.log("Got state")
 
-    return (
-        loading?(
-            <div className="w-screen h-screen bg-gray-200 dark:bg-gray-700"></div>
-        ):(
-            (user)?(
-                <ContentRouter />
-            ):(<Login />)
-        )
-    )
-}
+    if (error) return <div>Error: {error.message}</div>;
+    if (loading) return <div>Loading...</div>;
+    if (!user) return <Login />;
+
+    return <ContentRouter />;
+};
+
+export default App;

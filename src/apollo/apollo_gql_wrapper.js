@@ -6,7 +6,7 @@ import {
 } from '@apollo/client';
 
 const httpLink = new HttpLink({
-    uri: "https://youassign-server-production.up.railway.app"
+    uri: "https://youassignserver-production.up.railway.app"
 });
 
 const client = new ApolloClient({
